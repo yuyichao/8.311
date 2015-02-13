@@ -193,8 +193,20 @@ Assuming the disk is parallel to the $x-y$ plane at $z_0$.
 \subsection{}
 \eqar{
   \lim_{a\rightarrow0,r\neq0}g_a\paren{r}=&\lim_{a\rightarrow0,r\neq0}\frac{3a^2}{4\pi\paren{r^2+a^2}^{5/2}}\\
-  =&\lim_{a\rightarrow0,r\neq0}\frac{3a^2}{4\pir^5}\\
+  =&\lim_{a\rightarrow0,r\neq0}\frac{3a^2}{4\pi r^5}\\
   =&0
 }
+
+\section{}
+Area of the spherical cap
+\eqar{
+  S=&2\pi\sqrt{z^2+R^2}\paren{\sqrt{z^2+R^2}-\abs{z}}
+  \intertext{Magnitude of solid angle}
+  \abs{\Omega}=&2\pi\paren{1-\frac{\abs{z}}{\sqrt{z^2+R^2}}}
+  \intertext{Solid angle}
+  \Omega=&2\pi\paren{\mathbf{sgn}(z)-\frac{\mathbf{sgn}(z)\abs{z}}{\sqrt{z^2+R^2}}}
+  =&2\pi\paren{\mathbf{sgn}(z)-\frac{z}{\sqrt{z^2+R^2}}}
+}
+For $z=\pm0$, $\Omega=\pm2\pi$.
 
 \end{document}
