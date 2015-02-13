@@ -228,4 +228,18 @@ $\Phi(z=\pm0)=\pm\dfrac{D}{2\varepsilon_0}$, $\Delta\Phi=\dfrac{D}{\varepsilon_0
   D=&-\frac{1}{4\pi}\frac{p_o\cos\theta}{R^2}
 }
 
+\section{}
+\eqar{
+  \nabla\times\vec F=&\frac1{4\pi}\nabla\times\paren{\nabla\times\int\frac{\vec c(\vec r')\ud^3x'}{\abs{\vec r-\vec r'}}}\\
+  =&\frac1{4\pi}\int\ud^3x'\nabla\times\paren{\nabla\times\frac{\vec c(\vec r')}{\abs{\vec r-\vec r'}}}\\
+  =&\frac1{4\pi}\int\ud^3x'\paren{\nabla\paren{\nabla\cdot\frac{\vec c(\vec r')}{\abs{\vec r-\vec r'}}}-\nabla^2\frac{\vec c(\vec r')}{\abs{\vec r-\vec r'}}}
+  \intertext{Since $\vec c$ is a curl field, $\nabla\cdot\vec c=0$}
+  \nabla\times\vec F=&\frac1{4\pi}\int\ud^3x'\paren{\nabla\paren{\nabla\frac{1}{\abs{\vec r-\vec r'}}\cdot\vec c(\vec r')}-\nabla^2\frac{\vec c(\vec r')}{\abs{\vec r-\vec r'}}}\\
+  =&\frac1{4\pi}\paren{-\nabla\int\ud^3x'\nabla'\cdot\frac{\vec c(\vec r')}{\abs{\vec r-\vec r'}}-\int\ud^3x'\vec c(\vec r')\nabla^2\frac{1}{\abs{\vec r-\vec r'}}}\\
+  =&\frac1{4\pi}\paren{-\nabla\oiint\ud\vec S\cdot\frac{\vec c(\vec r')}{\abs{\vec r-\vec r'}}+\int\ud^3x'\vec c(\vec r')4\pi\delta\paren{\vec r-\vec r'}}
+  \intertext{If $c$ drops to $0$ faster than $\dfrac1r$}
+  \nabla\times\vec F=&\frac1{4\pi}\paren{\vec c(\vec r)4\pi}\\
+  =&\vec c(\vec r)
+}
+
 \end{document}
