@@ -13,13 +13,25 @@
 \usepackage{amscd}
 \usepackage{picinpar}
 \usepackage[pdftex]{graphicx}
+\usepackage{tikz}
 \usepackage{indentfirst}
 \usepackage{wrapfig}
 \usepackage{units}
 \usepackage{textcomp}
 \usepackage[utf8x]{inputenc}
-\usepackage{feyn}
+% \usepackage{feyn}
 \usepackage{feynmp}
+\usetikzlibrary{
+  arrows,
+  calc,
+  decorations.pathmorphing,
+  decorations.pathreplacing,
+  decorations.markings,
+  fadings,
+  positioning,
+  shapes
+}
+
 \DeclareGraphicsRule{*}{mps}{*}{}
 \newcommand{\ud}{\mathrm{d}}
 \newcommand{\ue}{\mathrm{e}}
@@ -150,6 +162,39 @@ Use $X_c$ to respresent treating $X$ as constant during the derivative.
 Assuming the disk is parallel to the $x-y$ plane at $z_0$.
 \eqar{
   \rho\paren{\rho, \theta, z}=&\frac{Q}{\pi b^2}\delta\paren{z-z_0}\Theta\paren{b-r}
+}
+
+\section{}
+\subsection{}
+\eqar{
+  g_a=&\nabla^2f_a\\
+  =&-\frac1{4\pi r^2}\pdiff{}{r}\paren{r^2\pdiff{}{r}\paren{\frac{1}{\sqrt{r^2+a^2}}}}\\
+  =&\frac1{4\pi r^2}\pdiff{}{r}\paren{\frac{r^3}{\sqrt{r^2+a^2}^3}}\\
+  =&\frac{3}{4\pi\paren{r^2+a^2}}\pdiff{}{r}\paren{\frac{r}{\sqrt{r^2+a^2}}}\\
+  =&\frac{3a^2}{4\pi\paren{r^2+a^2}^{5/2}}
+}
+\begin{tikzpicture}[thick]
+  \draw[->] (0, 0) -- (14, 0) node[right] {$r$};
+  \draw[->] (0, 0) -- (0, 7) node[above] {$g$};
+  \draw[red] plot[samples=2000, domain=0:13]
+  function {3 * 0.2**2 / 4 / pi / ((x / 16)**2 + 0.2**2)**(5 / 2)};
+  \draw[green] plot[samples=2000, domain=0:13]
+  function {3 * 0.3**2 / 4 / pi / ((x / 16)**2 + 0.3**2)**(5 / 2)};
+  \draw[blue] plot[samples=2000, domain=0:13]
+  function {3 * 0.4**2 / 4 / pi / ((x / 16)**2 + 0.4**2)**(5 / 2)};
+\end{tikzpicture}
+\subsection{}
+\eqar{
+  \int\ud r 4\pi r^2 g_a=&\int\ud r 4\pi r^2 \frac{3a^2}{4\pi\paren{r^2+a^2}^{5/2}}\\
+  =&\int\frac{3\rho^2\ud\rho}{\paren{1+\rho^2}^{5/2}}\\
+  =&\int_0^{\pi/2}3\sin^2\theta\ud\sin\theta\\
+  =&1
+}
+\subsection{}
+\eqar{
+  \lim_{a\rightarrow0,r\neq0}g_a\paren{r}=&\lim_{a\rightarrow0,r\neq0}\frac{3a^2}{4\pi\paren{r^2+a^2}^{5/2}}\\
+  =&\lim_{a\rightarrow0,r\neq0}\frac{3a^2}{4\pir^5}\\
+  =&0
 }
 
 \end{document}
