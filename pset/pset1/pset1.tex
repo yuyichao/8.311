@@ -108,4 +108,48 @@ Recitation Section \psettitlersection
   =&\paren{\vec B\paren{\vec A\cdot\vec C}-\vec C\paren{\vec A\cdot\vec B}}_i
 }
 
+\subsection{}
+\eqar{
+  &\vec A\times\paren{\nabla\times\vec A}\\
+  =&\paren{\nabla\otimes\vec A}\cdot\vec A-\paren{\vec A\cdot\nabla}\vec A\\
+  =&\frac12\nabla\paren{A^2}-\paren{\vec A\cdot\nabla}\vec A
+}
+
+\subsection{}
+Use $X_c$ to respresent treating $X$ as constant during the derivative.
+\eqar{
+  &\nabla\times(\vec A\times\vec B)\\
+  =&\nabla\times(\vec A_c\times\vec B)+\nabla\times(\vec A\times\vec B_c)\\
+  =&\vec A_c(\nabla\cdot\vec B)-(\vec A_c\cdot\nabla)\vec B-\vec B_c(\nabla\cdot\vec A)+(\vec B_c\cdot\nabla)\vec A\\
+  =&\vec A(\nabla\cdot\vec B)-(\vec A\cdot\nabla)\vec B-\vec B(\nabla\cdot\vec A)+(\vec B\cdot\nabla)\vec A
+}
+
+\section{}
+\subsection{}
+\eqar{
+  &\int^{max}_{min} f(x)\Theta'(x-a)\ud x\\
+  =&\int^{max}_{min} f(x)\ud\Theta(x-a)\\
+  =&\left.f(x)\Theta(x-a)\right|^{max}_{min}-\int^{max}_{min}\Theta(x-a)\ud f(x)\\
+  =&f(max)-\int^{max}_{a}\ud f(x)\\
+  =&f(a)
+}
+\subsection{}
+\eqar{
+  \diff{\mathbf{sgn}(t)}{t}=&\diff{2\Theta(t)-1}{t}\\
+  =&2\delta(t)
+}
+\subsection{}
+\eqar{
+  \rho\paren{r, \theta, \phi}=&\frac{Q}{4\pi R^2}\delta\paren{r-R}
+}
+\subsection{}
+\eqar{
+  \rho\paren{\rho, \theta, z}=&\frac{\lambda}{2\pi b}\delta\paren{\rho-b}
+}
+\subsection{}
+Assuming the disk is parallel to the $x-y$ plane at $z_0$.
+\eqar{
+  \rho\paren{\rho, \theta, z}=&\frac{Q}{\pi b^2}\delta\paren{z-z_0}\Theta\paren{b-r}
+}
+
 \end{document}
