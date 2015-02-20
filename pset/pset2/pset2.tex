@@ -232,4 +232,24 @@ See above.
   =&-B_0I\hat x\\
 }
 
+\section{}
+\subsection{}
+\eqar{
+  \vec E_{line}=&\frac{\lambda\paren{\vec r-\vec Y}}{2\pi\varepsilon_0\paren{\vec r-\vec Y}^2}\\
+  =&\frac{\lambda\paren{x\hat x+\paren{y-Y}\hat y}}{2\pi\varepsilon_0\paren{x^2+\paren{y-Y}^2}}\\
+  E=&\frac{\lambda\paren{x\hat x+\paren{y-Y}\hat y}}{2\pi\varepsilon_0\paren{x^2+\paren{y-Y}^2}}-E_0\hat y
+}
+\subsection{}
+\eqar{
+  &\int_{-\infty}^\infty\ud x\int_{-L}^L\ud y\varepsilon_0\vec E_0\cdot\vec E_{line}\\
+  =&-\int_{-\infty}^\infty\ud x\int_{-L}^L\ud y\varepsilon_0\frac{\lambda\paren{x\hat x+\paren{y-Y}\hat y}}{2\pi\varepsilon_0\paren{x^2+\paren{y-Y}^2}}E_0\cdot\hat y\\
+  =&-\frac{E_0\lambda}{2\pi}\int_{-\infty}^\infty\ud x\int_{-L}^L\ud y\frac{y-Y}{x^2+\paren{y-Y}^2}\\
+  =&-\frac{E_0\lambda}{4\pi}\int_{-\infty}^\infty\ud x\ln\paren{\frac{x^2+\paren{L-Y}^2}{x^2+\paren{-L-Y}^2}}
+  \intertext{Let $\alpha=\dfrac xL$, $\beta=\dfrac YL$}
+  \diff{E}{z}=&-\frac{E_0\lambda}{4\pi}\int_{-\infty}^\infty\ud\alpha\ln\paren{\frac{\alpha^2+\paren{1-\beta}^2}{\alpha^2+\paren{1+\beta}^2}}\\
+  =&-\frac{E_0\lambda}{4\pi}\int_{-\infty}^\infty\ud\alpha\ln\paren{\frac{\alpha^2+1-2\beta}{\alpha^2+1+2\beta}}\\
+  \approx&-\frac{E_0\lambda L}{4\pi}\int_{-\infty}^\infty\ud\alpha\frac{4\beta}{1+\alpha^2}\\
+  =&-E_0\lambda Y
+}
+
 \end{document}
