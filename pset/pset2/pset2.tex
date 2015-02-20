@@ -193,8 +193,8 @@ See above.
 }
 \subsection{}
 \eqar{
-  \ud\vec F=&\varepsilon_0R\ud\phi\ud z\paren{E_r\vec E-\frac{1}{2}E^2\hat r}\\
-  =&\varepsilon_0R\ud\phi\ud z\paren{\frac{E_r^2-E_\phi^2}2\hat r+E_rE_\phi\hat\phi}
+  \ud\vec F=&\varepsilon_0r\ud\phi\ud z\paren{E_r\vec E-\frac{1}{2}E^2\hat r}\\
+  =&\varepsilon_0r\ud\phi\ud z\paren{\frac{E_r^2-E_\phi^2}2\hat r+E_rE_\phi\hat\phi}
 }
 \subsection{}
 \eqar{
@@ -208,8 +208,28 @@ See above.
 
 \section{}
 \subsection{}
+\eqar{
+  B_r=&B_0\sin\phi\\
+  B_\phi=&\frac{\mu_0 I}{2\pi r}+B_0\cos\phi
+}
 \subsection{}
+\eqar{
+  B_r=&0\\
+  B_\phi=&\frac{\mu_0 I2\pi B_0}{2\pi \mu_0I}+B_0\\
+  =&0
+}
 \subsection{}
+\eqar{
+  \ud\vec F=&\frac1\mu_0r\ud\phi\ud z\paren{B_r\vec B-\frac{1}{2}B^2\hat r}\\
+  =&\frac1\mu_0r\ud\phi\ud z\paren{\frac{B_r^2-B_\phi^2}2\hat r+B_rB_\phi\hat\phi}
+}
 \subsection{}
+\eqar{
+  \diff{\vec F}{z}=&\frac12\int\frac{r}{\mu_0}\ud\phi\paren{\paren{B_r^2-B_\phi^2}\hat r+2B_rB_\phi\hat\phi}\\
+  =&\frac{r\hat x}{2\mu_0}\int\ud\phi\paren{\paren{B_0^2\sin^2\phi-\paren{\frac{\mu_0 I}{2\pi r}+B_0\cos\phi}^2}\cos\phi-2B_0\sin\phi\paren{\frac{\mu_0 I}{2\pi r}+B_0\cos\phi}\sin\phi}\\
+  =&\frac{r\hat x}{2\mu_0}\int\ud\phi\paren{-\paren{\frac{\mu_0 I}{2\pi r}+B_0\cos\phi}^2\cos\phi-B_0\sin^2\phi\frac{\mu_0 I}{\pi r}}\\
+  =&\frac{\hat x}{2}\int\ud\phi\paren{-\frac{I}{\pi}B_0\cos^2\phi-B_0\sin^2\phi\frac{I}{\pi}}\\
+  =&-B_0I\hat x\\
+}
 
 \end{document}
