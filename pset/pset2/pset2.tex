@@ -130,4 +130,53 @@ Recitation Section \psettitlersection
   =&a_{ij}\pdiff{f}{x_j}
 }
 
+\section{}
+\subsection{}
+\eqar{
+  \delta_{ij}'=&a_{im}a_{jn}\delta_{mn}\\
+  =&a_{ik}a_{jk}\\
+  =&\delta_{ij}
+}
+\subsection{}
+\eqar{
+  C'_iT'_{ij}=&a_{ik}C_ka_{im}a_{jn}T_{mn}\\
+  =&a_{ik}a_{im}a_{jn}C_kT_{mn}\\
+  =&\delta_{km}a_{jn}C_kT_{mn}\\
+  =&a_{jk}C_iT_{ik}\\
+  =&(C_iT_{ik})'
+}
+\subsection{}
+Since both $A_iA_j$ and $\delta_{ij}$ are second rank tensors and $A^2$ is a scalar, $T_{ij}$ is also a second rank tensor.
+\subsection{}
+\eqar{
+  &\partial_i\paren{A_iA_j-\frac12\delta_{ij}A_kA_k}\\
+  =&\partial_i\paren{A_iA_j}-\frac12\partial_j\paren{A_kA_k}\\
+  =&A_j\partial_i\paren{A_i}+A_i\partial_i\paren{A_j}-A_k\partial_j\paren{A_k}\\
+  =&A_j\partial_i\paren{A_i}+A_i\partial_i\paren{A_j}-A_i\partial_j\paren{A_i}\\
+  =&A_j\partial_i\paren{A_i}+A_i\paren{\delta_{ki}\delta_{jl}-\delta_{jk}\delta{il}}\partial_k\paren{A_l}\\
+  =&A_j\partial_i\paren{A_i}+\varepsilon_{mij}A_i\varepsilon_{mkl}\partial_k\paren{A_l}\\
+  =&A_j\partial_i\paren{A_i}+\varepsilon_{jmi}\paren{\varepsilon_{mkl}\partial_k\paren{A_l}}A_i
+}
+\subsection{}
+\subsubsection{}
+\eqar{
+  T_{ij}n_j=&\paren{A_iA_j-\frac12\delta_{ij}A^2}n_j\\
+  =&A_iA_jn_j-\frac12A^2n_i
+}
+Therefore $T\cdot\vec n$ is a linear combination of $\vec A$ and $\vec n$
+\subsubsection{}
+Let $B_i=T_{ij}n_j$
+\eqar{
+  B_iB_i=&\paren{A_iA_jn_j-\frac12A^2n_i}\paren{A_iA_kn_k-\frac12A^2n_i}\\
+  =&\paren{A_jn_j}^2A^2+\frac14A^4-\paren{A_jn_j}^2A^2
+  =&\frac14A^4\\
+  B_in_i=&A_iA_jn_jn_i-\frac12A^2\\
+  =&A^2\paren{\cos^2\theta-\frac12}\\
+  =&\frac{A^2}2\cos2\theta\\
+  \cos\theta_{Bn}=&\cos2\theta\\
+  \theta_{Bn}=&2\theta
+}
+\subsubsection{}
+See above.
+
 \end{document}
