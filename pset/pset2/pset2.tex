@@ -252,4 +252,23 @@ See above.
   =&-E_0\lambda Y
 }
 
+\section{}
+\subsection{}
+Let $\ud S$ be the area between the boundary at $t$ and $t + \ud t$ (pointing outward), $S$ and $S'$ are the surface at $t$ and $t + \ud t$ respectively.
+\eqar{
+  \oiint_{-S+S'+\ud S}\vec G\cdot\ud\vec a=&\iiint_{\ud V}\nabla\cdot\vec G\ud v\\
+  =&\ud t\iint_{S}\paren{\nabla\cdot\vec G}\vec V\cdot\ud\vec a\\
+  \ud\paren{\iint_{S}\vec G\paren{t}\cdot\ud\vec a}=&\iint_{S}\vec \ud G\cdot\ud\vec a+\paren{\iint_{S'}\vec G\cdot\ud\vec a-\iint_{S}\vec G\cdot\ud\vec a}\\
+  =&\ud t\iint_{S}\pdiff{\vec G}t\cdot\ud\vec a-\iint_{\ud S}\vec G\cdot\ud\vec a+\ud t\iint_{S}\paren{\nabla\cdot\vec G}\vec V\cdot\ud\vec a\\
+  =&\ud t\paren{\iint_{S}\pdiff{\vec G}t\cdot\ud\vec a+\iint_{S}\paren{\nabla\cdot\vec G}\vec V\cdot\ud\vec a}-\oint_{C}\vec G\cdot\paren{\ud\vec l\times\vec V\ud t}\\
+  \diff{}{t}\iint_{S}\vec G\paren{t}\cdot\ud\vec a=&\iint_{S}\pdiff{\vec G}t\cdot\ud\vec a+\iint_{S}\paren{\nabla\cdot\vec G}\vec V\cdot\ud\vec a-\oint_{C}\vec G\cdot\paren{\ud\vec l\times\vec V}\\
+  =&\iint_{S}\pdiff{\vec G}t\cdot\ud\vec a+\iint_{S}\paren{\nabla\cdot\vec G}\vec V\cdot\ud\vec a-\oint_{C}\ud\vec l\cdot\paren{\vec V\times\vec G}\\
+}
+\subsection{}
+\eqar{
+  \diff{}{t}\iint_{S}\vec B\paren{t}\cdot\ud\vec a=&\iint_{S}\pdiff{\vec B}t\cdot\ud\vec a+\iint_{S}\paren{\nabla\cdot\vec B}\vec V\cdot\ud\vec a-\oint_{C}\ud\vec l\cdot\paren{\vec V\times\vec B}\\
+  =&\iint_{S}\paren{\nabla\times\vec E}\cdot\ud\vec a-\oint_{C}\ud\vec l\cdot\paren{\vec V\times\vec B}\\
+  =&\oint_{C}\ud\vec l\cdot\paren{\vec E-\vec V\times\vec B}
+}
+
 \end{document}
