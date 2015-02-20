@@ -271,4 +271,44 @@ Let $\ud S$ be the area between the boundary at $t$ and $t + \ud t$ (pointing ou
   =&\oint_{C}\ud\vec l\cdot\paren{\vec E-\vec V\times\vec B}
 }
 
+\section{}
+\subsection{}
+\eqar{
+  &\paren{\pdiff[2]{}{x}-\frac1{c^2}\pdiff[2]{}{t}}G\\
+  =&-\frac{c}2\paren{\pdiff[2]{}{x}-\frac1{c^2}\pdiff[2]{}{t}}\Theta\paren{t-t'-\frac{\abs{x-x'}}{c}}\\
+  =&-\frac{c}2\paren{\pdiff[2]{}{x}\Theta\paren{ct-ct'-\abs{x-x'}}-\pdiff[2]{}{(ct)}\Theta\paren{ct-ct'-\abs{x-x'}}}\\
+  =&-\frac{c}2\paren{-\pdiff{}{x}\delta\paren{ct-ct'-\abs{x-x'}}\mathbf{sign}\paren{x-x'}-\pdiff{}{ct}\delta\paren{ct-ct'-\abs{x-x'}}}\\
+  =&\frac{c}2\paren{\mathbf{sign}\paren{x-x'}\pdiff{}{x}\delta\paren{ct-ct'-\abs{x-x'}}+\delta\paren{ct-ct'-\abs{x-x'}}\pdiff{}{x}\mathbf{sign}\paren{x-x'}+\pdiff{}{ct}\delta\paren{ct-ct'-\abs{x-x'}}}\\
+  =&\frac{c}2\paren{-\mathbf{sign}^2\paren{x-x'}\delta'\paren{ct-ct'-\abs{x-x'}}+2\delta\paren{ct-ct'-\abs{x-x'}}\delta\paren{x-x'}+\delta'\paren{ct-ct'-\abs{x-x'}}}\\
+  =&c\delta\paren{ct-ct'-\abs{x-x'}}\delta\paren{x-x'}\\
+  =&\delta\paren{t-t'}\delta\paren{x-x'}
+}
+(Last equation is using scaling law of $\delta$ function and the fact that the second $\delta$ limits $x-x'=0$)
+\subsection{}
+\eqar{
+  \vec A=&\frac{c}2\mu_0\int\ud t'\int\ud x'\hat y\sigma_0 v\delta(x')\Theta\paren{t-t'-\frac{\abs{x-x'}}{c}}\\
+  =&\frac{\sigma_0\mu_0c}2\hat y\int\ud t'v\Theta\paren{t-t'-\frac{\abs{x}}{c}}\\
+  \phi=&\frac{c}2\frac{1}{\varepsilon_0}\int\ud t'\int\ud x'\sigma_0\delta(x')\Theta\paren{t-t'-\frac{\abs{x-x'}}{c}}\\
+  =&\frac{\sigma_0c}{2\varepsilon_0}\int\ud t'\Theta\paren{t-t'-\frac{\abs{x}}{c}}
+}
+\eqar{
+  \vec B=&\nabla\times\vec A\\
+  =&\frac{c}2\pdiff{}{x}\hat x\times\sigma_0\mu_0\hat y\int\ud t'v\Theta\paren{t-t'-\frac{\abs{x}}{c}}\\
+  =&\frac{c\sigma_0\mu_0\hat z}{2}\int\ud t'v\pdiff{}{x}\Theta\paren{t-t'-\frac{\abs{x}}{c}}\\
+  =&-\frac{\sigma_0\mu_0}{2}\hat z\int\ud t'v\delta\paren{t-t'-\frac{\abs{x}}{c}}\mathbf{sign}\paren{x}\\
+  =&-\frac{\sigma_0\mu_0}{2}\hat zv\paren{t-\frac{\abs{x}}{c}}\mathbf{sign}\paren{x}
+}
+\eqar{
+  \vec E=&-\pdiff{\vec A}{t}-\nabla\phi\\
+  =&\frac{\sigma_0\mu_0c}2\hat y\int\ud t'v\pdiff{}{t}\Theta\paren{t-t'-\frac{\abs{x}}{c}}+\frac{\sigma_0c}{2\varepsilon_0}\hat x\int\ud t'\diff{}{x}\Theta\paren{t-t'-\frac{\abs{x}}{c}}\\
+  =&\frac{\sigma_0\mu_0c}2\hat y\int\ud t'v\delta\paren{t-t'-\frac{\abs{x}}{c}}+\frac{\sigma_0}{2\varepsilon_0}\hat x\int\ud t'\delta\paren{t-t'-\frac{\abs{x}}{c}}\mathbf{sign}\paren{x}\\
+  =&\frac{\sigma_0\mu_0c}2\hat yv\paren{t-\frac{\abs{x}}{c}}+\frac{\sigma_0}{2\varepsilon_0}\hat x\mathbf{sign}\paren{x}
+}
+\subsection{}
+\eqar{
+  \vec B=&\hat z\frac{\sigma_0\mu_0V_0}{2}\theta\paren{t-\frac{\abs{x}}{c}}\mathbf{sign}\paren{x}\\
+  \vec E=&\frac{\sigma_0\mu_0cV_0}2\hat y\theta\paren{t-\frac{\abs{x}}{c}}+\frac{\sigma_0}{2\varepsilon_0}\hat x\mathbf{sign}\paren{x}\\
+  =&\frac{\sigma_0}{2\varepsilon_0}\paren{\hat y\frac{V_0}{c}\theta\paren{t-\frac{\abs{x}}{c}}+\hat x\mathbf{sign}\paren{x}}
+}
+
 \end{document}
