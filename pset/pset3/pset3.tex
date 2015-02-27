@@ -160,7 +160,47 @@ Recitation Section \psettitlersection
 }
 \section{}
 \subsection{}
+\eqar{
+  E=&\int_R^\infty\ud r\int_0^{2\pi}\ud\phi\int_{0}^{\pi}\sin\theta\ud\theta\frac{p^2}{32\pi^2\varepsilon_0r^4}\paren{4\cos^2\theta+\sin^2\theta}\\
+  =&\frac{p^2}{16\pi\varepsilon_0}\int_R^\infty\frac{\ud r}{r^4}\int_{0}^{\pi}\ud\theta\sin\theta\paren{4\cos^2\theta+\sin^2\theta}\\
+  =&\frac{p^2}{12\pi\varepsilon_0 R^3}
+}
 \subsection{}
+Direvatives of the dipole moment
+\eqar{
+  \dot\vec p=&\dot p\hat z\\
+  \ddot\vec p=&\ddot p\hat z
+  \intertext{Magnetic field}
+  \vec B=&\frac{\hat z\times\hat n}{4\pi\varepsilon_0}\paren{\frac{\dot p}{r^2}+\frac{\ddot p}{cr}}\\
+  =&\frac{\sin\theta\hat\phi}{4\pi\varepsilon_0}\paren{\frac{\dot p}{r^2}+\frac{\ddot p}{cr}}\\
+  \intertext{Electric field}
+  \vec E=&\frac{3\hat n\paren{\vec p\cdot\hat n}-\vec p}{4\pi\varepsilon_0r^3}
+  +\frac{3\hat n\paren{\dot{\vec p}\cdot\hat n}-\dot{\vec p}}{4\pi\varepsilon_0cr^2}
+  +\frac{\paren{\ddot{\vec p}\times\hat n}\times\hat n}{4\pi\varepsilon_0c^2r}\\
+  =&\frac{3p\cos\theta\hat n-p\hat z}{4\pi\varepsilon_0r^3}
+  +\frac{3\dot p\cos\theta\hat n-\dot p\hat z}{4\pi\varepsilon_0cr^2}
+  +\frac{\ddot p\sin\theta\hat\phi\times\hat n}{4\pi\varepsilon_0c^2r}\\
+  =&\frac{3p\cos\theta\hat n-p\hat z}{4\pi\varepsilon_0r^3}
+  +\frac{3\dot p\cos\theta\hat n-\dot p\hat z}{4\pi\varepsilon_0cr^2}
+  +\frac{\ddot p\sin\theta\hat\theta}{4\pi\varepsilon_0c^2r}
+  \intertext{Since $\hat z=\cos\theta\hat n-\sin\theta\hat\theta$}
+  \vec E=&\frac{2p\cos\theta\hat n+p\sin\theta\hat\theta}{4\pi\varepsilon_0r^3}
+  +\frac{2\dot p\cos\theta\hat n+\dot p\sin\theta\hat\theta}{4\pi\varepsilon_0cr^2}
+  +\frac{\ddot p\sin\theta\hat\theta}{4\pi\varepsilon_0c^2r}\\
+  =&\frac{2\cos\theta\hat n}{4\pi\varepsilon_0}\paren{\frac{p}{r^3}+\frac{\dot p}{cr^2}}
+  +\frac{\sin\theta\hat\theta}{4\pi\varepsilon_0}\paren{\frac{p}{r^3}+\frac{\dot p}{cr^2}+\frac{\ddot p}{c^2r}}
+  \intertext{Energy flux}
+  \Phi_E=&\frac{1}{\mu_0 c^2}\int\ud t\int_0^{2\pi}\ud\phi\int_0^{\pi}\ud\theta\sin\theta r^2
+  \frac{\sin\theta}{4\pi\varepsilon_0}\paren{\frac{\dot p}{r^2}+\frac{\ddot p}{cr}}\frac{\sin\theta}{4\pi\varepsilon_0}\paren{\frac{p}{r^3}+\frac{\dot p}{cr^2}+\frac{\ddot p}{c^2r}}\\
+  =&\frac{1}{6\pi\varepsilon_0}\int\ud t
+  \paren{\frac{\dot p}{r}+\frac{\ddot p}{c}}\paren{\frac{p}{r^2}+\frac{\dot p}{cr}+\frac{\ddot p}{c^2}}\\
+  =&\frac{1}{6\pi\varepsilon_0}\paren{\frac1{2r}\paren{\frac{p}{r}+\frac{\dot p}{c}}^2}_{t_0}^{t_1}+
+  \frac{1}{6\pi\mu_0\varepsilon_0^2}\int\ud t
+  \paren{\frac{\dot p}{r}+\frac{\ddot p}{c}}\paren{\frac{\ddot p}{c^2}}\\
+  =&\frac{p_2^2-p_1^2}{12\pi\varepsilon_0r^3}+
+  \int\frac{\ddot p^2}{6\pi\mu_0\varepsilon_0^2c^3}\ud t
+}
+The first term corresponds to change in the energy stored in the field.
 \section{}
 \subsection{}
 \subsection{}
