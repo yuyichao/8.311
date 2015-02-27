@@ -281,12 +281,13 @@ Helicity is positive for $\theta>0$ and negative for $\theta<0$\\
 Ellipticity is $\abs{\cos\theta}$
 \subsection{}
 \eqar{
-  \frac{\ud W_{rad}}{\ud\Omega\ud t}=&\frac{1}{\mu_0c}\frac{\mu_0^2 m_0^2\omega_0^4}{16\pi^2 r^2c^2}\frac12\paren{\cos^2\theta+1}\\
-  =&\frac{\mu_0 m_0^2\omega_0^4\paren{\cos^2\theta+1}}{32\pi^2 r^2c^3}
+  \frac{\ud W_{rad}}{\ud\Omega\ud t}=&\frac{1}{\mu_0c}\frac{\mu_0^2 m_0^2\omega_0^4}{16\pi^2 c^2}\frac12\paren{\cos^2\theta+1}\\
+  =&\frac{\mu_0 m_0^2\omega_0^4\paren{\cos^2\theta+1}}{32\pi^2 c^3}
 }
 \subsection{}
 \eqar{
-  \angl{\diff{W}{t}}=&\frac{3\mu_0 m_0^2\omega_0^4}{16\pi r^2c^3}
+  \angl{\diff{W}{t}}=&\frac{\mu_0 m_0^2\omega_0^4}{32\pi^2 c^3}\int_0^{2\pi}\ud\phi\int_0^\pi\ud\theta\sin\theta\paren{\cos^2\theta+1}\\
+  =&\frac{\mu_0 m_0^2\omega_0^4}{6\pi c^3}\\
 }
 \subsection{}
 \eqar{
@@ -301,8 +302,8 @@ Ellipticity is $\abs{\cos\theta}$
 \subsection{}
 After the angular integral, only the $z$ component can be not zero
 \eqar{
-  \angl{\diff{W}{\Omega}}=&\hat z\frac{\mu_0 m_0^2\omega_0^3}{16\pi^2 c^3}\int\ud\Omega\sin^2\theta\\
-  =&\hat z\frac{\mu_0 m_0^2\omega_0^3}{8\pi c^3}
+  \angl{\diff{W}{\Omega}}=&\hat z\frac{\mu_0 m_0^2\omega_0^3}{16\pi^2 c^3}\int_0^{2\pi}\ud\phi\int_0^\pi\ud\theta\sin\theta\sin^2\theta\\
+  =&\hat z\frac{\mu_0 m_0^2\omega_0^3}{6\pi c^3}
 }
 \section{}
 \subsection{}
