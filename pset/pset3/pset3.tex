@@ -254,11 +254,56 @@ Therefore if $dk$ and $Ak^2$ are all small (where $k$ is the wave vector) the ra
 }
 \section{}
 \subsection{}
+\eqar{
+  \vec B_{\perp}=&\frac{\mu_0}{4\pi}\paren{\frac1{cr^2}\paren{3\hat n\paren{\dot{\vec m}\cdot\hat n}-\dot{\vec m}}+\frac1{rc^2}\paren{\ddot{\vec m}\times\hat n}\times\hat n}\\
+  =&\frac{\mu_0 m_0\omega_0}{4\pi rc}\lparen{\frac1{r}\paren{3\hat n\paren{\paren{\cos\omega_0t\hat y-\sin\omega_0t\hat x}\cdot\hat n}-\paren{\cos\omega_0t\hat y-\sin\omega_0t\hat x}}}\\
+  &-\rparen{\frac{\omega_0}{c}\paren{\paren{\cos\omega_0t\hat x+\sin\omega_0t\hat y}\times\hat n}\times\hat n}\\
+  =&\frac{\mu_0 m_0\omega_0}{4\pi rc}\lparen{\frac{2\hat e_r}{r}\paren{\cos\omega_0t\sin\theta\sin\phi-\sin\omega_0t\sin\theta\cos\phi}}\\
+  &-\frac1{r}\cos\omega_0t\paren{\cos\theta\sin\phi\hat e_\theta+\cos\phi\hat e_\phi}+\frac1{r}\sin\omega_0t\paren{\cos\theta\cos\phi\hat e_\theta-\sin\phi\hat e_\phi}\\
+  &-\rparen{\frac{\omega_0}{c}\paren{\cos\omega_0t\paren{-\cos\theta\cos\phi\hat e_\phi-\sin\phi\hat e_\theta}+\sin\omega_0t\paren{-\cos\theta\sin\phi\hat e_\phi+\cos\phi\hat e_\theta}}\times\hat e_r}\\
+  =&\frac{\mu_0 m_0\omega_0}{4\pi rc}\lparen{\frac{2\hat e_r\sin\theta\sin\paren{\phi-\omega_0t}-\cos\theta\sin\paren{\phi-\omega_0t}\hat e_\theta
+      -\cos\paren{\phi-\omega_0t}\hat e_\phi}{r}}\\
+  &+\rparen{\frac{\omega_0}{c}\paren{\cos\theta\cos\paren{\phi-\omega_0t}\hat e_\theta-\sin\paren{\phi-\omega_0t}\hat e_\phi}}
+}
+\eqar{
+  \vec E=&-\frac{\mu_0}{4\pi}\paren{\frac{\ddot{\vec m}}{cr}+\frac{\dot{\vec m}}{r^2}}\times\hat e_r\\
+  =&\frac{\mu_0 m_0}{4\pi r}\paren{\frac{\omega_0^2}{c}\paren{\cos\theta\cos\paren{\phi-\omega_0t}\hat e_\theta-\sin\paren{\phi-\omega_0t}\hat e_\phi}
+    -\frac{\omega_0}{r}\paren{\cos\theta\sin\paren{\phi-\omega_0t}\hat e_\theta+\cos\paren{\phi-\omega_0t}\hat e_\phi}}\times\hat e_r\\
+  =&\frac{\mu_0 m_0\omega_0}{4\pi r}\paren{-\frac{\omega_0}{c}\paren{\cos\theta\cos\paren{\phi-\omega_0t}\hat e_\phi+\sin\paren{\phi-\omega_0t}\hat e_\theta}
+    +\frac{1}{r}\paren{\cos\theta\sin\paren{\phi-\omega_0t}\hat e_\phi-\cos\paren{\phi-\omega_0t}\hat e_\theta}}
+}
 \subsection{}
+For radiation part
+\eqar{
+  \vec E_{rad}=&-\frac{\mu_0 m_0\omega_0^2}{4\pi rc}\paren{\cos\theta\cos\paren{\phi-\omega_0t}\hat e_\phi+\sin\paren{\phi-\omega_0t}\hat e_\theta}
+}
+Helicity is positive for $\theta>0$ and negative for $\theta<0$\\
+Ellipticity is $\abs{\cos\theta}$
 \subsection{}
+\eqar{
+  \frac{\ud W_{rad}}{\ud\Omega\ud t}=&\frac{1}{\mu_0c}\frac{\mu_0^2 m_0^2\omega_0^4}{16\pi^2 r^2c^2}\frac12\paren{\cos^2\theta+1}\\
+  =&\frac{\mu_0 m_0^2\omega_0^4\paren{\cos^2\theta+1}}{32\pi^2 r^2c^3}
+}
 \subsection{}
+\eqar{
+  \angl{\diff{W}{t}}=&\frac{3\mu_0 m_0^2\omega_0^4}{16\pi r^2c^3}
+}
 \subsection{}
+\eqar{
+  \diff{W}{t\ud\Omega}=&-r^3\hat n\times\paren{\paren{\varepsilon_0\vec E\vec E+\frac1{\mu_0}\vec B\vec B}\cdot\hat n}\\
+  =&-r^3\paren{\varepsilon_0\hat n\times\vec E\vec E\cdot\hat n+\frac1{\mu_0}\hat n\times\vec B\vec B\cdot\hat n}\\
+  =&-\frac{m_0\omega_0r}{2\pi c}\sin\theta\sin\paren{\phi-\omega_0t}\hat n\times\vec B
+  \intertext{Ignoring the terms that vanishes for large $r$}
+  \diff{W}{t\ud\Omega}=&-\frac{\mu_0 m_0^2\omega_0^3}{8\pi^2c^3}\sin\theta\sin\paren{\phi-\omega_0t}\paren{\cos\theta\cos\paren{\phi-\omega_0t}\hat e_\phi+\sin\paren{\phi-\omega_0t}\hat e_\theta}
+  \intertext{Time averaging}
+  \angl{\diff{W}{t\ud\Omega}}=&-\frac{\mu_0 m_0^2\omega_0^3}{16\pi^2c^3}\sin\theta\hat e_\theta
+}
 \subsection{}
+After the angular integral, only the $z$ component can be not zero
+\eqar{
+  \angl{\diff{W}{\Omega}}=&\hat z\frac{\mu_0 m_0^2\omega_0^3}{16\pi^2 c^3}\int\ud\Omega\sin^2\theta\\
+  =&\hat z\frac{\mu_0 m_0^2\omega_0^3}{8\pi c^3}
+}
 \section{}
 \subsection{}
 \subsection{}
