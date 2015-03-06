@@ -197,7 +197,18 @@ The radiation (and therefore the stress tensor) has mirror symmetry along each a
 }
 
 \section{}
-\subsection{}
+\eqar{
+  a_y=&-\frac{eE_0}{m_e}\cos\omega t-\frac{e^2}{6\pi\varepsilon_0 m_e c^3}\dot a_y\\
+  v_y=&-\frac{eE_0}{m_e\omega}\sin\omega t-\frac{e^2}{6\pi\varepsilon_0 m_e c^3}\dot v_y\\
+  \tilde v_y=&\ui\frac{eE_0}{m_e\omega}\ue^{\ui\omega t}-\ui\omega\frac{e^2}{6\pi\varepsilon_0 m_e c^3}\tilde v_y\\
+  \tilde v_y=&\ui\frac{eE_0}{m_e\omega}\ue^{\ui\omega t}-\ui\frac23\omega\tau_e\tilde v_y\\
+  \tilde v_y=&\ui\frac{eE_0}{m_e\omega}\frac{1}{1+\ui\frac23\omega\tau_e}\ue^{\ui\omega t}
+  \intertext{Force}
+  \angl{F}=&\frac12\Re\paren{\ui e\frac{eE_0}{m_ec\omega}\frac{1}{1+\ui\frac23\omega\tau_e}\ue^{\ui\omega t}E_0\ue^{-\ui\omega t}}\\
+  =&-\frac12\Im\paren{\frac{e^2E_0^2}{m_ec\omega}\frac{1}{1+\ui\frac{2\omega r_e}{3c}}}\\
+  =&\frac12\frac{e^2E_0^2}{m_ec\omega}\frac{\frac{2\omega r_e}{3c}}{1+\frac{4\omega^2 r_e^2}{9c^2}}\\
+  \approx&\frac{e^4E_0^2}{12\pi\varepsilon_0m_e^2c^4}
+}
 
 \section{}
 
