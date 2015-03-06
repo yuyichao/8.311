@@ -167,7 +167,19 @@ The radiation will be a dipole radiation appears at $\omega$ with total power
 
 \section{}
 \subsection{}
+\eqar{
+  \vec B=&\nabla\times A\\
+  =&\frac{\mu_0}{4\pi}\int\ud^3\vec r'\nabla\times\paren{\frac{1}{\abs{\vec r-\vec r'}}\vec j\paren{\vec r', t-\frac{\abs{\vec r-\vec r'}}{c}}}\\
+  =&\frac{\mu_0}{4\pi}\int\ud^3\vec r'\frac{1}{\abs{\vec r-\vec r'}}\nabla\times\vec j\paren{\vec r', t-\frac{\abs{\vec r-\vec r'}}{c}}
+  +\paren{\nabla\frac{1}{\abs{\vec r-\vec r'}}}\times\vec j\paren{\vec r', t-\frac{\abs{\vec r-\vec r'}}{c}}\\
+  =&\frac{\mu_0}{4\pi}\int\ud^3\vec r'\vec j\paren{\vec r', t-\frac{\abs{\vec r-\vec r'}}{c}}\times\frac{\vec r-\vec r'}{\abs{\vec r-\vec r'}^3}
+  +\pdiff{}{t}\vec j\paren{\vec r', t-\frac{\abs{\vec r-\vec r'}}{c}}\times\frac{\vec r-\vec r'}{c\abs{\vec r-\vec r'}^2}
+}
 \subsection{}
+The ratio of the two term is on the order of (replacing time derivative with $T$ and replace $\abs{\vec r-\vec r'}$ with $d$)
+\eqar{
+  \frac{d}{cT}\ll1
+}
 
 \section{}
 \subsection{}
