@@ -111,5 +111,79 @@ Recitation Section \psettitlersection
 \begin{document}
 \section{}
 \subsection{}
+In $x$, $y$, $z$ basis
+\eqar{
+  Q_{ij}=&\begin{pmatrix}
+    -2d^2q&&\\
+    &-2d^2q&\\
+    &&4d^2q
+  \end{pmatrix}\\
+  =&2d^2q\begin{pmatrix}
+    -1&&\\
+    &-1&\\
+    &&2
+  \end{pmatrix}
+  \intertext{Potential}
+  \Phi=&\frac{1}{8\pi\varepsilon_0}\frac{Q_{ij}x_ix_j}{r^5}\\
+  =&\frac{d^2q}{4\pi\varepsilon_0}\frac{-x^2-y^2+2z^2}{r^5}\\
+  =&\frac{d^2q}{4\pi\varepsilon_0}\frac{3\cos^2\theta-1}{r^3}
+  \intertext{Electric field}
+  E_r=&\frac{3d^2q}{4\pi\varepsilon_0}\frac{3\cos^2\theta-1}{r^4}\\
+  E_\theta=&\frac{d^2q}{4\pi\varepsilon_0}\frac{3\sin2\theta}{r^4}
+  \intertext{Field line}
+  \diff{r}{\theta}=&r\frac{3\cos^2\theta-1}{\sin2\theta}\\
+  \frac{\ud r}{r}=&\frac{3\cos^2\theta-1}{\sin2\theta}\ud\theta\\
+  r=&R_0\sin\theta\sqrt{\cos\theta}
+  \intertext{The field line is the furthest when $\ddiff{r}{\theta}=0$}
+  \theta=\arccos\frac{1}{\sqrt{3}}
+}
+
+\subsection{}
+Magnetic field
+\eqar{
+  \vec B=&-\frac{\mu_0}{24\pi c^2 r}\hat r\times\paren{\hat r\cdot\dddot Q}\\
+  =&-\frac{\mu_0}{24\pi c^2 r}\hat r\times\paren{\hat r\cdot\diff[3]{2d^2q\paren{3\hat z\hat z-1}}{t}}\\
+  =&-\frac{q\mu_0 d_0^2}{12\pi c^2 r}\hat r\times\paren{3\paren{\hat r\cdot\hat z}\hat z-\hat r}\diff[3]{\cos^2\omega t}{t}\\
+  =&\frac{q\mu_0 d_0^2\omega^3}{\pi c^2 r}\paren{\hat r\cdot\hat z}\paren{\hat r\times\hat z}\sin2\omega t\\
+  =&-\frac{q\mu_0 d_0^2\omega^3}{2\pi c^2 r}\sin2\theta\sin2\omega t\hat e_\phi
+  \intertext{Electric field}
+  \vec E=&c\vec B\times\vec r\\
+  =&-\frac{q\mu_0 d_0^2\omega^3}{2\pi c r}\sin2\theta\sin2\omega t\hat e_\theta
+  \intertext{Power}
+  \diff{P}{\Omega}=&\frac{q^2d_0^4\omega^6}{8\pi^2\varepsilon_0 c^5}\sin^22\theta
+  \intertext{The radiation is the strongest for $\theta=\dfrac\pi4$ and $\theta=\dfrac{3\pi}{4}$}
+  P=&\int_0^\pi\ud\theta\sin\theta\int_{0}^{2\pi}\ud\phi\frac{q^2d_0^4\omega^6}{8\pi^2\varepsilon_0 c^5}\sin^22\theta\\
+  =&\frac{4q^2d_0^4\omega^6}{15\pi\varepsilon_0 c^5}
+}
+The radiation appears at $2\omega$
+\subsection{}
+The radiation will be a dipole radiation appears at $\omega$ with total power
+\eqar{
+  P=&\frac{q^2d_0^2\omega^4}{12\pi\varepsilon_0 c^3}
+  \intertext{Ratio of power}
+  \frac{P_{quad}}{P}=&\frac{16d_0^2\omega^2}{5 c^2}\\
+  \ll&1
+}
+
+\section{}
+\subsection{}
+\subsection{}
+
+\section{}
+\subsection{}
+\subsection{}
+\subsection{}
+
+\section{}
+\subsection{}
+
+\section{}
+
+\section{}
+\subsection{}
+\subsection{}
+\subsection{}
+\subsection{}
+\subsection{}
 
 \end{document}
