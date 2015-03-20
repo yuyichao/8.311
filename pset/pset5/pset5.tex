@@ -191,7 +191,21 @@ For $\gamma\gg1$, $\beta\approx1$
 
 \section{}
 \subsection{}
+\eqar{
+  E_i=&-\frac{p_j}{4\pi\varepsilon_0}\partial_i\frac{r_j}{r^3}\\
+  =&\frac{p_j}{4\pi\varepsilon_0}\partial_i\partial_j\frac{1}{r}
+  \intertext{Since $\nabla^2\dfrac{1}{r}=-4\pi\delta\paren{\vec r}$}
+  \partial_i\frac{r_j}{r^3}=&\paren{\frac{\delta_{ij}}{r^3}-3\frac{x_ix_j}{r^5}}+\frac{4\pi}{3}\delta_{ij}\delta\paren{\vec r}\\
+  E_i=&\frac{1}{4\pi\varepsilon_0}\paren{3\frac{x_ix_jp_j}{r^5}-\frac{p_i}{r^3}}-\frac{1}{3\varepsilon_0}p_i\delta\paren{\vec r}
+}
 \subsection{}
+\eqar{
+  \nabla\times\paren{\frac{\mu_0}{4\pi}\frac{\vec m\times\vec r}{r^3}}=&\frac{\mu_0}{4\pi}\paren{\vec m\paren{\nabla\cdot\frac{\vec r}{r^3}}-\vec m\cdot\paren{\nabla\frac{\vec r}{r^3}}}\\
+  =&\frac{\mu_0}{4\pi}\paren{\vec m 4\pi\delta\paren{\vec r}+
+      3\frac{\paren{\vec m\cdot\vec r}\vec r}{r^5}-\frac{\vec m}{r^3}-\frac{4\pi\vec m}{3}\delta\paren{\vec r}
+  }\\
+  =&\frac{\mu_0}{4\pi}\paren{3\frac{\paren{\vec m\cdot\vec r}\vec r}{r^5}-\frac{\vec m}{r^3}}+\frac{2\mu_0\vec m}{3}\delta\paren{\vec r}\\
+}
 \subsection{}
 \subsection{}
 \subsection{}
