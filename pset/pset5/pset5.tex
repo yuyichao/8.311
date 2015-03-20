@@ -198,7 +198,24 @@ For $\gamma\gg1$, $\beta\approx1$
 
 \section{}
 \subsection{}
+\eqar{
+  \vec E\paren{x, t}=&-\hat y\frac{c\mu_0}{2}\int_{-\infty}^{\infty}\ud x'J_0\exp\paren{\ui\paren{kx'-\omega\paren{t-\frac{\abs{x-x'}}c}}}
+}
 \subsection{}
+\eqar{
+  \vec E\paren{x, t}=&-\hat y\frac{c\mu_0J_0\ue^{\ui\paren{kx-\omega t}}}{2}\paren{\int_{-\infty}^{0}\ud x''\exp\paren{\ui\paren{k-\frac{\omega}c}x''}+\int_{0}^{\infty}\ud x''\exp\paren{\ui\paren{k+\frac{\omega}c}x''}}\\
+  =&-\hat y\frac{c\mu_0J_0\ue^{\ui\paren{kx-\omega t}}}{2\ui}\paren{\frac{1}{k-\omega/c}-\frac{1}{k+\omega/c}}\\
+  =&\ui\hat yc\mu_0J_0\ue^{\ui\paren{kx-\omega t}}\frac{\omega/c}{k^2-\omega^2/c^2}
+}
 \subsection{}
+\eqar{
+  J_{pol}=&\varepsilon_0\paren{k_e-1}\omega\hat yc\mu_0J_0\ue^{\ui\paren{kx-\omega t}}\frac{\omega/c}{k^2-\omega^2/c^2}\\
+  =&J_0\hat y\ue^{\ui\paren{kx-\omega t}}\\
+  1=&\varepsilon_0\paren{k_e-1}\omega c\mu_0\frac{\omega/c}{k^2-\omega^2/c^2}
+  \intertext{Let $v\equiv\frac{\omega}{k}$}
+  1=&\paren{k_e-1}\frac{v^2}{c^2-v^2}\\
+  \frac{c^2}{v^2}=&k_e\\
+  v=&\frac{c}{\sqrt{k_e}}
+}
 
 \end{document}
