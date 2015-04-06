@@ -145,12 +145,84 @@ Define
 
 \section{}
 \subsection{}
+\eqar{
+  \abs{n}^2=&\abs{\frac{kc}{\omega}}^2\\
+  =&\abs{\frac{k^2}{\omega^2}}c^2\\
+  \approx&\frac{\mu_0\sigma}{\omega}c^2\\
+  =&\frac{\sigma}{\varepsilon_0\omega}\\
+  \gg&1\\
+  \frac{E_{0t}}{E_{0i}}=&\frac{2}{n+1}\\
+  \approx&\frac{2}{n}\\
+  \frac{E_{0r}}{E_{0i}}=&-\frac{n-1}{n+1}\\
+  \approx&-1+\frac{2}{n}
+}
 \subsection{}
+Incident
+\eqar{
+  \vec E_i=&\hat x E_{0i}\ue^{-\ui\omega t+\ui k_0z}\\
+  \vec B_i=&\hat y \frac{E_{0i}}{c}\ue^{-\ui\omega t+\ui k_0z}
+  \intertext{Transmitted}
+  \vec E_t=&\hat x E_{0t}\ue^{-\ui\omega t+\ui kz}\\
+  =&\hat x E_{0i}\frac{\sqrt2\delta\omega}{c}
+  \ue^{-\ui\omega t+\ui \paren{1+\ui}z/\delta-\ui\pi/4}\\
+  \vec B_t=&\hat y \frac{nE_{0t}}{c}\ue^{-\ui\omega t+\ui kz}\\
+  =&\hat y \frac{2E_{0i}}{c}\ue^{-\ui\omega t+\ui \paren{1+\ui}z/\delta}
+  \intertext{Reflected}
+  \vec E_r=&\hat x E_{0r}\ue^{-\ui\omega t-\ui k_0z}\\
+  =&\hat x \paren{1-\frac{2\omega\delta}{(1+\ui)c}}E_{0i}\ue^{-\ui\omega t-\ui k_0z}\\
+  \vec B_r=&\hat y \frac{E_{0r}}{c}\ue^{-\ui\omega t-\ui k_0z}\\
+  =&\hat y \paren{1-\frac{2\omega\delta}{(1+\ui)c}}\frac{E_{0i}}{c}\ue^{-\ui\omega t-\ui k_0z}
+  \intertext{Current density}
+  \vec j=&\sigma\vec E_t\\
+  =&\hat x \sigma E_{0i}\frac{\sqrt2\delta\omega}{c}
+  \ue^{-\ui\omega t+\ui \paren{1+\ui}z/\delta-\ui\pi/4}\\
+  =&\hat x\frac{2E_{0i}}{\mu_0\omega\delta^2}\frac{\sqrt2\delta\omega}{c}
+  \ue^{-\ui\omega t+\ui \paren{1+\ui}z/\delta-\ui\pi/4}\\
+  =&\hat x\frac{2E_{0i}}{\mu_0c}\frac{\sqrt2}{\delta}
+  \ue^{-\ui\omega t+\ui \paren{1+\ui}z/\delta-\ui\pi/4}
+}
 \subsection{}
+Incident
+\eqar{
+  \angl{S_i}=&\vec z\frac{E_{0i}^2}{2c\mu_0}
+  \intertext{Reflected}
+  \angl{S_r}=&-\vec z\frac{\Re\paren{E_{0r}}^2}{2c\mu_0}\\
+  =&-\vec z\Re\paren{1-\frac{4\omega}{ck}}\frac{E_{0i}^2}{2c\mu_0}\\
+  =&-\angl{S_i}\paren{1-\frac{2\omega\delta}{c}}
+  \intertext{Transmitted}
+  \angl{S_t}=&\vec z\frac{\abs{nE_{0t}^2}}{2c\mu_0}\\
+  =&\vec z\Re\paren{\frac{4}{n}}\frac{E_{0i}^2}{2c\mu_0}\\
+  =&\angl{S_i}\frac{2\omega\delta}{c}
+}
 \subsection{}
+\eqar{
+  R=&\paren{1-\frac{2\omega\delta}{c}}\\
+  T=&\frac{2\omega\delta}{c}
+}
 \subsection{}
+\eqar{
+  P=&\int_0^\infty\angl{\frac{j^2}{\sigma}}\ud z\\
+  =&\frac{1}{2\sigma}\int_0^\infty\ue^{-2z/\delta}\ud z
+  \paren{\frac{2E_{0i}}{\mu_0c}\frac{\sqrt2}{\delta}}^2\\
+  =&\omega\delta\frac{E_{0i}^2}{\mu_0c^2}\\
+  =&\angl{S_i}\frac{2\omega\delta}{c}
+}
 \subsection{}
+\eqar{
+  \vec p=&\int_0^\infty\angl{\vec j\times\vec B}\ud z\\
+  =&\frac{\hat z}2\int_0^\infty\Re\paren{\frac{2E_{0i}}{\mu_0c}\frac{\sqrt2}{\delta}
+    \ue^{-2z/\delta-\ui\pi/4}
+    \frac{2E_{0i}}{c}}\ud z\\
+  =&\hat z\frac{E_{0i}^2}{\mu_0 c^2}
+}
 \subsection{}
+\eqar{
+  \lim_{\delta\rightarrow0}\vec j=&\vec x\frac{2B_{0i}}{\mu_0}\frac{\ue^{-z/\delta}}{\delta}\cos\paren{\omega t-\frac{z}{\delta}}\\
+  =&\vec x\frac{2B_{0i}}{\mu_0}\delta\paren{z}\cos\paren{\omega t-\frac{z}{\delta}}\\
+  =&\vec x\frac{2B_{0i}}{\mu_0}\delta\paren{z}\cos{\omega t}
+}
+\subsection{}
+The field generated near the surface is $-\vec xB_{0i}\cos{\omega t}$, which is just enough to cancel the incident field.
 
 \section{}
 \subsection{}
