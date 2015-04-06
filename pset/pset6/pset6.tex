@@ -222,15 +222,66 @@ Incident
   =&\vec x\frac{2B_{0i}}{\mu_0}\delta\paren{z}\cos{\omega t}
 }
 \subsection{}
-The field generated near the surface is $-\vec xB_{0i}\cos{\omega t}$, which is just enough to cancel the incident field.
+The field generated near the surface is $-\vec yB_{0i}\cos{\omega t}$, which is just enough to cancel the incident field.
 
 \section{}
 \subsection{}
+\eqar{
+  \vec a=&-\frac{e}{m}\vec E\\
+  \vec v=&-\frac{e}{-\ui m\omega}\vec E\\
+  =&-\ui\frac{e}{m\omega}\vec E\\
+  \vec j=&\ui\frac{n_ee^2}{m\omega}\vec E\\
+  -\vec k\times\paren{\vec k\times\vec E}=&\ui\omega\mu_0\paren{\ui\frac{n_ee^2}{m\omega}\vec E-\ui\omega\epsilon_0\vec E}\\
+  k^2=&\frac{1}{c^2}\paren{\omega^2-\frac{n_ee^2}{m\epsilon_0}}
+}
 \subsection{}
+$n=\dfrac{kc}{\omega}=\dfrac{\ui c}{\omega\delta}$\\
+Incident
+\eqar{
+  \vec E_i=&\hat x E_{0i}\ue^{-\ui\omega t+\ui k_0z}\\
+  \vec B_i=&\hat y \frac{E_{0i}}{c}\ue^{-\ui\omega t+\ui k_0z}
+  \intertext{Transmitted}
+  \vec E_t=&\hat x E_{0t}\ue^{-\ui\omega t-z/\delta}\\
+  =&\hat x \frac{2}{n+1}E_{0i}\ue^{-\ui\omega t-z/\delta}\\
+  \vec B_t=&\hat y \frac{nE_{0t}}{c}\ue^{-\ui\omega t-z/\delta}\\
+  =&\hat y \frac{2n}{\paren{n+1}}\frac{E_{0i}}{c}\ue^{-\ui\omega t-z/\delta}
+  \intertext{Reflected}
+  \vec E_r=&\hat x E_{0r}\ue^{-\ui\omega t-\ui k_0z}\\
+  =&-\hat x \frac{n-1}{n+1}E_{0i}\ue^{-\ui\omega t-\ui k_0z}\\
+  \vec B_r=&-\hat y \frac{E_{0r}}{c}\ue^{-\ui\omega t-\ui k_0z}\\
+  =&\hat y \frac{n-1}{n+1}\frac{E_{0i}}{c}\ue^{-\ui\omega t-\ui k_0z}\\
+  \intertext{Current density}
+  \vec j=&\ui\frac{n_ee^2}{m\omega}\vec E_t\\
+  =&\ui\hat x\frac{n_ee^2}{m\omega}\frac{2}{n+1}E_{0i}\ue^{-\ui\omega t-z/\delta}
+}
 \subsection{}
+Incident
+\eqar{
+  \angl{S_i}=&\vec z\frac{E_{0i}^2}{2c\mu_0}
+  \intertext{Reflected}
+  \angl{S_r}=&-\vec z\frac{\abs{E_{0r}}^2}{2c\mu_0}\\
+  =&-\vec z\abs{\frac{n-1}{n+1}}^2\frac{E_{0i}^2}{2c\mu_0}\\
+  =&-\angl{S_i}
+  \intertext{Transmitted}
+  \angl{S_t}=&0
+}
 \subsection{}
+\eqar{
+  R=&1\\
+  T=&0
+}
 \subsection{}
+There's no ohmic heating since nothing is heated up.
+
 \subsection{}
+\eqar{
+  \angl{\vec j\times\vec B}=&\frac12\Re\paren{\ui\hat x\frac{n_ee^2}{m\omega}\frac{2}{n+1}E_{0i}\ue^{-\ui\omega t-z/\delta}
+    \times
+    \hat y\frac{-2n}{\paren{-n+1}}\frac{E_{0i}}{c}\ue^{\ui\omega t-z/\delta}}\\
+  =&\hat z\frac{n_ee^2}{m\omega c}\frac{2\abs{n}}{1-n^2}E_{0i}^2\ue^{-2z/\delta}\\
+  \vec p=&\hat z\frac{n_ee^2}{mc}\frac{1}{\omega_p^2}E_{0i}^2\\
+  =&\hat z\frac{\varepsilon_0E_{0i}^2}{c}
+}
 
 \section{}
 
