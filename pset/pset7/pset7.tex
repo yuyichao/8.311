@@ -111,7 +111,41 @@ Recitation Section \psettitlersection
 \begin{document}
 \section{}
 \subsection{}
+Expand the field in derivatives in $x$ and $y$
+\eqar{
+  \vec E=&\paren{\vec E_0+\vec E_1}\ue^{\ui kz-\ui\omega t}+\cdots\\
+  \vec B=&\paren{\vec B_0+\vec B_1}\ue^{\ui kz-\ui\omega t}+\cdots\\
+  \intertext{where $\vec E_0=E_0\paren{\hat x\pm\ui\hat y}$, Since}
+  \nabla\cdot\vec E=&0\\
+  0=&\nabla\cdot\vec E_0\ue^{\ui kz-\ui\omega t}+\nabla\ue^{\ui kz-\ui\omega t}\cdot\paren{\vec E_0+\vec E_1}\\
+  =&\paren{\pdiff{E_0}{x}\pm\ui\pdiff{E_0}{y}}\ue^{\ui kz-\ui\omega t}+\ui k\ue^{\ui kz-\ui\omega t}E_{z_1}\\
+  E_{z_1}=&\frac{\ui}{k}\paren{\pdiff{E_0}{x}\pm\ui\pdiff{E_0}{y}}\\
+  \vec E=&\paren{E_0\paren{\hat x\pm\ui\hat y}+\frac{\ui}{k}\paren{\pdiff{E_0}{x}\pm\ui\pdiff{E_0}{y}}\hat z}\ue^{\ui kz-\ui\omega t}
+  \intertext{$B$ field}
+  \vec B=&-\frac{\ui}{\omega}\nabla\times\vec E\\
+  =&-\frac{\ui}{\omega}\paren{\ui k\hat z\times\paren{\vec E_0+\vec E_1}\ue^{\ui kz-\ui\omega t}+\paren{\nabla E_0}\times\paren{\hat x\pm\ui\hat y}\ue^{\ui kz-\ui\omega t}}\\
+  =&\frac{k}{\omega}\paren{E_0\paren{\hat y\mp\ui\hat x}\pm\frac1k\paren{\pdiff{E_0}{x}\pm\ui\pdiff{E_0}{y}}\hat z}\ue^{\ui kz-\ui\omega t}\\
+  =&\mp\ui\frac{k}{\omega}\paren{E_0\paren{\hat x\pm\ui\hat y}+\frac{\ui}k\paren{\pdiff{E_0}{x}\pm\ui\pdiff{E_0}{y}}\hat z}\ue^{\ui kz-\ui\omega t}\\
+  =&\mp\ui\sqrt{\mu\varepsilon}\vec E
+}
 \subsection{}
+Angular momentum density
+\eqar{
+  \vec l=&\varepsilon_0\vec r\times\paren{\vec E\times\vec B}\\
+  \angl{l_z}=&\frac{\hat z}2\cdot\varepsilon_0\vec r\times\Re\paren{\vec E\times\vec B^*}\\
+  =&\frac{\hat z}2\cdot\varepsilon_0\vec r\times\Re\paren{\vec E_0\times\vec B_1^*+\vec E_1\times\vec B_0^*}\\
+  =&\mp\frac{\hat z}2\cdot\sqrt{\mu_0\varepsilon_0}\varepsilon_0\vec r\times\Re\paren{\ui\paren{\vec E_0\times\vec E_1^*-\vec E_0^*\times\vec E_1}}\\
+  =&\pm\hat z\cdot\sqrt{\mu_0\varepsilon_0}\varepsilon_0\vec r\times\Im\paren{\vec E_0\times\vec E_1^*}\\
+  =&\pm\hat z\cdot\sqrt{\mu_0\varepsilon_0}\varepsilon_0\vec r\times\Im\paren{E_0\paren{\hat x\pm\ui\hat y}\times\frac{-\ui}{k}\paren{\pdiff{E_0}{x}\mp\ui\pdiff{E_0}{y}}\hat z}\\
+  =&\mp\frac{\varepsilon_0E_0}{\omega}\Re\paren{\paren{-x\mp\ui y}\paren{\pdiff{E_0}{x}\mp\ui\pdiff{E_0}{y}}}\\
+  =&\pm\frac{\varepsilon_0E_0}{\omega}\paren{x\pdiff{E_0}{x}+y\pdiff{E_0}{y}}\\
+  =&\pm\frac{\varepsilon_0}{2\omega}\paren{x\pdiff{}{x}+y\pdiff{}{y}}E_0^2
+  \intertext{$1$D density}
+  \angl{L_z}=&\pm\int\ud\sigma\frac{1}{2\omega}\paren{x\pdiff{}{x}+y\pdiff{}{y}}u\\
+  =&\pm\int\ud\sigma\frac{u}{\omega}\\
+  =&\pm\frac{U}{\omega}
+}
+This means a circularly polarized photon of energy $\hbar\omega$ has angular momentum along it's propagation direction of $\pm\hbar$. The transverse component of angular momentum vanish because of symmetry.
 
 \section{}
 \subsection{}
