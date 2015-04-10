@@ -149,6 +149,24 @@ This means a circularly polarized photon of energy $\hbar\omega$ has angular mom
 
 \section{}
 \subsection{}
+\eqar{
+  \Psi=&\frac{\ui k\sqrt{I_0}}{2\pi}\int_{-X}^\infty\ud x\int_{-\infty}^\infty\ud y\frac{\ue^{\ui kR}}{R}\\
+  \approx&\frac{\ui k\sqrt{I_0}\ue^{\ui k Z}}{2\pi Z}\int_{-X}^\infty\ud x\int_{-\infty}^\infty\ud y\exp\paren{\frac{\ui k\rho^2}{2Z}}\\
+  \approx&\frac{\ui k\sqrt{I_0}\ue^{\ui k Z}}{2\pi Z}\int_{-X}^\infty\ud x\exp\paren{\frac{\ui kx^2}{2Z}}\int_{-\infty}^\infty\ud y\exp\paren{\frac{\ui ky^2}{2Z}}\\
+  =&\frac{\ui\sqrt{I_0}\ue^{\ui k Z}}{\pi}\int_{-\xi}^\infty\ud x'\ue^{\ui x'^2}\int_{-\infty}^\infty\ud y'\ue^{\ui y'^2}\\
+  =&\frac{\ui\sqrt{I_0}\ue^{\ui k Z}\paren{i+1}}{2}\sqrt{\frac{2}{\pi}}\int_{-\xi}^\infty\ud x'\ue^{\ui x'^2}
+}
 \subsection{}
+\eqar{
+  I=&\frac{I_0}{2}\frac{2}{\pi}\abs{\int_{-\xi}^\infty\ud x'\ue^{\ui x'^2}}^2\\
+  =&\frac{I_0}{2}\frac{2}{\pi}\paren{
+    \paren{\int_{-\xi}^\infty\ud x'\cos x'^2}^2+
+    \paren{\int_{-\xi}^\infty\ud x'\sin x'^2}^2
+  }\\
+  =&\frac{I_0}{2}\paren{
+    \paren{\mathcal{C}\paren{\xi}+\frac12}^2+
+    \paren{\mathcal{S}\paren{\xi}+\frac12}^2
+  }
+}
 
 \end{document}
