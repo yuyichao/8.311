@@ -134,5 +134,22 @@ Recitation Section \psettitlersection
 }
 
 \section{}
+For each solution to the triangular waveguide, mirroring the solution along the diagonal should always create a valid solution for the square waveguide. Therefore, we should be able to construct all solutions to the triangular waveguide from the solutions of the square ones.\\
+For TM modes,
+\eqar{
+  E^{mn}_z=&E_0\sin\frac{m\pi x}{a}\sin\frac{n\pi x}{a}
+  \intertext{Since $E_z=0$ on the diagonal}
+  E_z^{mn,tri}=&E_z^{mn}-E_z^{nm}
+  \intertext{Since $E_z^{mn}$ is symmetric for $m$, $n$, we should have $m > n$ for non-vanishing solution (and to avoid double counting). The cutoff frequencies are the same with the ones for square waveguide}
+  \omega_{mn}=&\frac{c\pi}{a}\sqrt{m^2+n^2}
+}
+For TE modes,
+\eqar{
+  B^{mn}_z=&E_0\cos\frac{m\pi x}{a}\cos\frac{n\pi x}{a}
+  \intertext{Since $\partial_nB_z=0$ on the diagonal}
+  B_z^{mn,tri}=&B_z^{mn}+B_z^{nm}
+  \intertext{Since $B_z^{mn}$ is symmetric for $m$, $n$, we should have $m \geqslant n$ to avoid double counting. The cutoff frequencies are the same with the ones for square waveguide}
+  \omega_{mn}=&\frac{c\pi}{a}\sqrt{m^2+n^2}
+}
 
 \end{document}
