@@ -3,8 +3,8 @@
 \newcommand{\course}[1]{\def\psettitlecourse{#1}}
 \newcommand{\rsection}[1]{\def\psettitlersection{#1}}
 \newcommand{\psetnum}[1]{\def\psettitlepsetnum{#1}}
-%\usepackage[journal=rsc]{chemstyle}
-%\usepackage{mhchem}
+% \usepackage[journal=rsc]{chemstyle}
+% \usepackage{mhchem}
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{amsfonts}
@@ -74,12 +74,12 @@
 \usepackage{fancyhdr}
 \usepackage{multirow}
 \usepackage{fontenc}
-%\usepackage{tipa}
+% \usepackage{tipa}
 \usepackage{ulem}
 \usepackage{color}
 \usepackage{cancel}
 \newcommand{\hcancel}[2][black]{\setbox0=\hbox{#2}%
-\rlap{\raisebox{.45\ht0}{\textcolor{#1}{\rule{\wd0}{1pt}}}}#2}
+  \rlap{\raisebox{.45\ht0}{\textcolor{#1}{\rule{\wd0}{1pt}}}}#2}
 \pagestyle{fancy}
 \setlength{\headheight}{67pt}
 \fancyhead{}
@@ -87,12 +87,12 @@
 \fancyfoot[C]{\thepage}
 \fancyhead[R]
 {
-\psettitlename \\
-\psettitlecourse{} Problem Set \psettitlepsetnum \\
-\ifx\psettitlersection\empty
-\else
-Recitation Section \psettitlersection
-\fi
+  \psettitlename \\
+  \psettitlecourse{} Problem Set \psettitlepsetnum \\
+  \ifx\psettitlersection\empty
+  \else
+  Recitation Section \psettitlersection
+  \fi
 }
 \renewcommand{\footruleskip}{0pt}
 \renewcommand{\headrulewidth}{0.4pt}
@@ -111,7 +111,33 @@ Recitation Section \psettitlersection
 \begin{document}
 \section{}
 \subsection{}
+\eqar{
+  z=&\bar n\int_0^x\frac{\ud x}{\sqrt{n^2-\bar n^2}}\\
+  =&\bar n\int_0^x\frac{\ud x}{\sqrt{n_0^2\text{sech}^2\paren{\alpha x}-\bar n^2}}\\
+  =&\frac{\cos\theta_0}{\alpha}\int_0^{\alpha x}\frac{\cosh\paren{\alpha x}\ud\alpha x}{\sqrt{1-\cos^2\theta_0\cosh^2\paren{\alpha x}}}\\
+  =&\frac{\cos\theta_0}{\alpha}\int_0^{\sinh\paren{\alpha x}}\frac{\ud\sinh\paren{\alpha x}}{\sqrt{\sin^2\theta_0-\cos^2\theta_0\sinh^2\paren{\alpha x}}}\\
+  =&\frac{1}{\alpha}\int_0^{\cot\theta_0\sinh\paren{\alpha x}}\frac{\ud y}{\sqrt{1-y^2}}\\
+  =&\frac{1}{\alpha}\arcsin\paren{\cot\theta_0\sinh\paren{\alpha x}}\\
+  \sin\paren{\alpha z}=&\cot\theta_0\sinh\paren{\alpha x}
+  \intertext{Since $\max\paren{\sin\paren{\alpha z}}=1$}
+  \sin\paren{\alpha z}=&\frac{\sinh\paren{\alpha x}}{\sinh\paren{\alpha x_{max}}}\\
+  \alpha x=&\text{arcsinh}\paren{\sinh\paren{\alpha x_{max}}\sin\paren{\alpha z}}
+}
+Rays for $\theta_0=\dfrac{\pi}{6},\ \dfrac{\pi}{4},\ \dfrac{\pi}{3}$
+\begin{center}
+  \begin{tikzpicture}
+    \draw[->, line width=1] (-0.5, 0) -- (6.6, 0);
+    \draw[red, line width=1] plot[domain=0:2*pi, samples=1000] function {asinh(sin(x) / tan(pi / 6))};
+    \draw[red, line width=1] plot[domain=0:2*pi, samples=1000] function {asinh(sin(x) / tan(pi / 4))};
+    \draw[red, line width=1] plot[domain=0:2*pi, samples=1000] function {asinh(sin(x) / tan(pi / 3))};
+  \end{tikzpicture}
+\end{center}
+
 \subsection{}
+\eqar{
+  Z=&\frac{\pi}{\alpha}
+}
+Independent from $\bar n$
 \subsection{}
 
 \section{}
