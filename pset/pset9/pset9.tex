@@ -167,6 +167,30 @@ For $r<R$, $B_l=0$, for $r>R$, $A_l=0$. Since the charge distribution only have 
 }
 
 \subsection{}
+For $r<R$, $B_l=0$, for $r>R$, $A_l=0$. Therefore, for $r<R$
+\eqar{
+  \phi_-=&\sum_l A_lr^lP_l\paren{\cos\theta}\\
+  B_{r-}=&\pdiff{\phi_-}{r}\\
+  =&\sum_l l A_lr^{l-1}P_l\paren{\cos\theta}\\
+  B_{\theta-}=&\frac1r\pdiff{\phi_-}{\theta}\\
+  =&\sum_l A_lr^{l-1}\pdiff{P_l\paren{\cos\theta}}{\theta}
+  \intertext{And for $r>R$}
+  \phi_+=&\sum_l\frac{B_l}{r^{l+1}}P_l\paren{\cos\theta}\\
+  B_{r+}=&\pdiff{\phi_+}{r}\\
+  =&-\sum_l\frac{\paren{l+1}B_l}{r^{l+2}}P_l\paren{\cos\theta}\\
+  B_{\theta+}=&\frac1r\pdiff{\phi_-}{\theta}\\
+  =&\sum_l\frac{B_l}{r^{l+2}}\pdiff{P_l\paren{\cos\theta}}{\theta}
+  \intertext{From the boundary condition (integrate the relation for $B_\theta$ ignoring a integral/potential constant that doesn't matter)}
+  A_l=&-\frac{l+1}{l}\frac{B_l}{R^{2l+1}}\\
+  \mu_0\kappa_0\sin\theta=&\sum_l\frac{B_l}{R^{l+2}}\pdiff{P_l\paren{\cos\theta}}{\theta}
+  -\sum_l A_lR^{l-1}\pdiff{P_l\paren{\cos\theta}}{\theta}\\
+  \mu_0\kappa_0\cos\theta=&\sum_l\paren{\frac{B_l}{R^{l+2}}-A_lR^{l-1}}P_l\paren{\cos\theta}
+  \intertext{Therefore only $l=1$ is not vanishing}
+  \mu_0\kappa_0=&\frac{B_1}{R^{3}}-A_l\\
+  A_1=&-2\frac{B_l}{R^3}\\
+  B_1=&\frac{\mu_0\kappa_0R^3}{3}\\
+  A_1=&-\frac{2\mu_0\kappa_0}{3}
+}
 
 \section{}
 
