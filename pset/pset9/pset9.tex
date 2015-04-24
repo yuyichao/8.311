@@ -193,5 +193,20 @@ For $r<R$, $B_l=0$, for $r>R$, $A_l=0$. Therefore, for $r<R$
 }
 
 \section{}
+Let the surface charge density be $\dfrac{\sigma_0}{\sqrt{R^2-\rho^2}}$.\\
+On the $Z$ axis
+\eqar{
+  \phi=&\frac{\sigma_0}{2\varepsilon_0}\int_0^R\frac{\rho\ud\rho}{\sqrt{\rho^2+r^2}\sqrt{R^2-\rho^2}}\\
+  =&\frac{\sigma_0}{4\varepsilon_0}\int_0^{R^2}\frac{\ud x}{\sqrt{r^2+x}\sqrt{R^2-x}}\\
+  =&\frac{\sigma_0}{4\varepsilon_0}
+  \paren{\frac{\pi}{2}+\arctan\paren{\frac{R^2-r^2}{2rR}}}\\
+  =&\frac{\sigma_0}{2\varepsilon_0}\sum_{l=0}^\infty(-1)^{l}\frac{R^{2l+1}}{r^{2l+1}}
+  \intertext{For off-axis points}
+  \phi=&\frac{\sigma_0}{2\varepsilon_0}\frac{R}{r}\sum_{l=0}^\infty\frac{(-1)^{l}}{2l+1}\paren{\frac{R}{r}}^{2l}P_{2l}\paren{\cos\theta}
+  \intertext{For the origin (from the expression for on-axis points)}
+  V=&\frac{\pi\sigma_0}{4\varepsilon_0}
+  \intertext{Therefore}
+  \phi=&\frac{2V}{\pi}\frac{R}{r}\sum_{l=0}^\infty\frac{(-1)^{l}}{2l+1}\paren{\frac{R}{r}}^{2l}P_{2l}\paren{\cos\theta}
+}
 
 \end{document}
