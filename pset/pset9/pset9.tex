@@ -139,14 +139,35 @@ Rays for $\theta_0=\dfrac{\pi}{6},\ \dfrac{\pi}{4},\ \dfrac{\pi}{3}$
 }
 Independent from $\bar n$
 \subsection{}
+\eqar{
+  L_{opt}=&\int_{z=0}^Z n\ud s\\
+  =&2\int_0^{x_{max}}n\sqrt{1+\paren{\diff{z}{x}}^2}\ud x\\
+  =&2\int_0^{x_{max}}n\sqrt{1+\paren{\frac{\bar n}{\sqrt{n^2-\bar n^2}}}^2}\ud x\\
+  =&2\int_0^{x_{max}}\frac{n^2}{\sqrt{n^2-\bar n^2}}\ud x\\
+  =&2n_0\int_0^{x_{max}}\frac{\text{sech}^2\paren{\alpha x}}{\sqrt{\text{sech}^2\paren{\alpha x}-\cos^2\theta_0}}\ud x\\
+  =&\frac{2n_0}{\alpha}\int_0^{\text{sinh}\paren{\alpha x_{max}}}\frac{\ud\text{sinh}\paren{\alpha x}}{\text{cosh}^2\paren{\alpha x}\sqrt{1-\cos^2\theta_0\text{cosh}^2\paren{\alpha x}}}\\
+  =&\frac{2n_0}{\alpha}\int_0^{\text{sinh}\paren{\alpha x_{max}}}\frac{\ud y}{\paren{1+y^2}\sqrt{\sin^2\theta_0-\cos^2\theta_0y^2}}\\
+  =&\frac{2n_0}{\alpha\cos\theta_0}\frac{\pi}{2\sqrt{1+\tan^2\theta_0}}\\
+  =&\frac{\pi n_0}{\alpha}\\
+  =&n_0Z
+}
 
 \section{}
 \subsection{}
+For $r<R$, $B_l=0$, for $r>R$, $A_l=0$. Since the charge distribution only have $P_1\paren{\cos\theta}$ component, the only non-zero term in the series is when $l=1$. Therefore, for $r<R$
+\eqar{
+  \phi_-=&A_1r\cos\theta
+  \intertext{And for $r>R$}
+  \phi_+=&\frac{B_1}{r^2}\cos\theta
+  \intertext{From the boundary condition}
+  A_1R=&\frac{B_1}{R^2}\\
+  \frac{\sigma}{\varepsilon_0}=&A_1+\frac{2B_1}{R^3}\\
+  A_1=&\frac{\sigma}{3\varepsilon_0}\\
+  B_1=&\frac{\sigma R^3}{3\varepsilon_0}
+}
+
 \subsection{}
 
 \section{}
-\subsection{}
-\subsection{}
-\subsection{}
 
 \end{document}
