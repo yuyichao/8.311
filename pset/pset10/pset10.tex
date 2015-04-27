@@ -151,7 +151,28 @@ The flux through a circle defined by $r$ and $\theta$, for $r < R$
   U_{B}=&\frac{\mu_0m^2}{4\pi R^3}
 }
 \subsection{}
+\eqar{
+  W=&\int_0^{\pi} R\ud\theta\int_0^{2\pi} R\sin\theta\ud\phi\kappa\sin\theta\diff{B}{t}\sin\theta\frac R2\\
+  =&\pi \frac{\mu_0}{3} R^3 \diff{\kappa^2}{t}\int_{-1}^1\ud z \paren{1-z^2}\\
+  =&\frac{\mu_0}{4\pi R^3}\diff{m^2}{t}\\
+  =&\diff{U_B}{t}
+}
 \subsection{}
+For $r=R+0^+$
+\eqar{
+  W_+=&\int_0^{\pi} R\ud\theta\int_0^{2\pi} R\sin\theta\ud\phi
+  \frac{\mu_0m}{4\pi R^3}\sin\theta\frac{1}{\mu_0}\diff{B}{t}\sin\theta\frac R2\\
+  =&\int_0^{\pi} R\ud\theta\int_0^{2\pi} R\sin\theta\ud\phi
+  \frac{\kappa}{3}\sin\theta\diff{B}{t}\sin\theta\frac R2\\
+  =&\frac{W}{3}
+  \intertext{For $r=R-0^+$}
+  W_-=&\int_0^{\pi} R\ud\theta\int_0^{2\pi} R\sin\theta\ud\phi
+  B\sin\theta\frac{1}{\mu_0}\diff{B}{t}\sin\theta\frac R2\\
+  =&\int_0^{\pi} R\ud\theta\int_0^{2\pi} R\sin\theta\ud\phi
+  \frac{2}{3}\kappa\sin\theta\diff{B}{t}\sin\theta\frac R2\\
+  =&\frac{2W}{3}
+}
+This is the same as what one would expect from (b) and (c) with determines the ratio and the sum of $W_-$ and $W_+$ respectively.
 \subsection{}
 \subsection{}
 \subsection{}
