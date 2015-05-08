@@ -111,8 +111,41 @@
 \begin{document}
 \section{}
 \subsection{}
+\eqar{
+  \mu_0\pdiff{}{t}\vec J=&\nabla^2\vec E_{\perp}-\frac{1}{c^2}\pdiff[2]{\vec E_{\perp}}{t}
+  \intertext{On the shell}
+  \mu_0\pdiff{}{t}\tilde J_\phi=&\pdiff[2]{}{r}\tilde E_{\phi}\\
+  \mu_0\pdiff{}{t}\tilde J_\phi=&-\ui\omega\mu_0\sigma\Omega_0 R\delta\paren{r-R}\sin\theta\ue^{-\ui\omega t}\\
+  \pdiff[2]{}{r}\tilde E_{\phi}=&kA\sin\theta\ue^{-\ui\omega t}\delta\paren{r-R}\\
+  &\paren{-\frac{\ue^{\ui x}}{x^5}\paren{\ui x^2-2x-2\ui}\paren{\sin x-x\cos x}
+    +\frac{\ue^{\ui x}}{x^5}\paren{x+\ui}\paren{2x\cos x-2\sin x+x^2\sin x}}
+  \intertext{where $x=kr$}
+  =&Ak\sin\theta\ue^{-\ui\omega t}\delta\paren{r-R}\frac{\ui}{x^2}\\
+  A=&-c\mu_0\sigma\Omega_0 R\paren{kR}^2
+}
 \subsection{}
+With $X=kR$
+\eqar{
+  \tilde E_\phi\paren{R}=&c\mu_0\sigma\Omega_0 RX^2\ue^{\ui X}\frac{\sin X-X\cos X}{X^2}\frac{X+\ui}{X^2}\sin\theta\ue^{-\ui\omega t}\\
+  =&c\mu_0\sigma\Omega_0 R\ue^{\ui X}\frac{\sin X-X\cos X}{X^2}\paren{X+\ui}\sin\theta\ue^{-\ui\omega t}
+  \intertext{Average power}
+  P=&-R^2\int\ud\Omega\Re\paren{c\mu_0\sigma^2\Omega_0^2 R^2\ue^{\ui X}\frac{\sin X-X\cos X}{X^2}\paren{X+\ui}\sin^2\theta}\\
+  =&\frac{8\pi}{3} c\mu_0\sigma^2\Omega_0^2 R^4\frac{\paren{\sin X-X\cos X}^2}{X^2}\\
+  =&\frac{8\pi}{3} c\mu_0\sigma^2\Omega_0^2 R^2\frac{\paren{\sin kR-kR\cos kR}^2}{k^2}
+  \intertext{Magnetostatic energy}
+  U_B=&\mu_0\frac{4\pi R^3}{9}\sigma^2\Omega_0^2R^2
+  \intertext{Normalized radiation}
+  p=&6\pi\frac{\paren{\sin kR-kR\cos kR}^2}{\paren{kR}^3}
+}
+\begin{tikzpicture}
+  \draw (0, 0) -- plot[domain=0.01:10,samples=1000]
+  function {6 * (sin(x) - x * cos(x))**2 / (x**3)};
+  \draw[->, line width=1] (0, 0) -- (11, 0);
+  \draw[->, line width=1] (0, 0) -- (0, 4);
+\end{tikzpicture}
 \subsection{}
+For small $kR$, $p\propto \paren{kR}^3$. This makes sense since it is the same scaling with a dipole radiation with constant change rate (i.e. one less factor of $\omega$)
 \subsection{}
+The pattern for larger $kR$ appears because of the interference of radiation from different part of the sphere. The maximum radiation appears when $kR\approx2.46$.
 
 \end{document}
